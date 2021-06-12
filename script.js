@@ -4,6 +4,10 @@ let taskArea = document.getElementById("task-area");
 
 addTaskButton.addEventListener("click", function () {
     let task = taskTextBar.value;
+    taskTextBar.value = "";
+    if (task.length == 0) {
+        return;
+    }
     let taskLi = document.createElement("li");
     let taskDiv = document.createElement("div");
     taskDiv.className = "d-flex justify-content-between align-items-center p-2";
